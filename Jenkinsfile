@@ -1,24 +1,24 @@
-pipeline{
+pipeline {
   agent any
-  stages{
-    stage(¨Build¨){
-      steps{
+  stages {
+    stage(¨Build¨) {
+      steps {
       echo 'Build de app'
 	  }
 	}		
-    stage(¨Install¨){
-      steps{
+    stage(¨Install¨) {
+      steps {
       echo 'Install de app'
       }
     }  
-    stage(¨Deploy¨){
-      steps{
+    stage(¨Deploy¨) {
+      steps {
       echo 'Deploy de app'
       } 
 		}
   }
   
 }
-  node{
+  node {
     // Groovy script
   }
