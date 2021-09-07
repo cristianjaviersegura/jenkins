@@ -1,9 +1,8 @@
 pipeline {
   agent any
-	parameters {
-		stringname: (name 'VERSION,defaultvalue: '',description: ´version to deploy'´
-			     )
-		choice: (name  'choices, [1,2,3]', description: ')
+parameters {stringname: (name: 'VERSION,defaultvalue: '',description: 'version to deploy')
+	    choice: (name:  'choices, [1,2,3]', description: ')
+	    booleanParam:(paramName: 'executeTest', defaulvaue:'True', description:'')
   stages {
     stage('Build') {
       steps {
@@ -15,7 +14,10 @@ pipeline {
       echo 'Install de app'
       }
     }  
-    stage('Deploy') {
+    stage('Deploy') 
+	  when {
+		  expression {
+			  param.executeTest}
       steps {
       echo 'Deploy de app'
       } 
