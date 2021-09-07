@@ -13,11 +13,7 @@ pipeline {
       }
     }  
     stage('Deploy') { 
-	 when {
-	    expression {
-			  params.executeTest}
-	  }
-      steps {
+	   steps {
       echo 'Deploy de app'
       } 
 		}
