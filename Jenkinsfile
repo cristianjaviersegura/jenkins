@@ -1,8 +1,8 @@
 pipeline {
   agent any
-parameters {stringname: (name: 'VERSION,defaultvalue: '',description: 'version to deploy')
-	    choice: (name:  'choices, [1,2,3]', description: ')
-	    booleanParam:(paramName: 'executeTest', defaulvaue:'True', description:'')
+parameters {
+	    choice: (name: 'VERSION' 'choices, [1,2,3]', description: '')
+	    booleanParam:(paramName: 'executeTest', defaultvaue:'True', description:'')
   stages {
     stage('Build') {
       steps {
