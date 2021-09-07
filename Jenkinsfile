@@ -21,4 +21,4 @@ pipeline {
       echo 'Deploy de app'
       } 
 		}
-  }
+}
