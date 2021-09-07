@@ -1,5 +1,9 @@
 pipeline {
   agent any
+	parameters {
+		stringname: (name 'VERSION,defaultvalue: '',description: ´version to deploy'´
+			     )
+		choice: (name  'choices, [1,2,3]', description: ')
   stages {
     stage('Build') {
       steps {
