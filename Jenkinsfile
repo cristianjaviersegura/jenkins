@@ -7,13 +7,13 @@ pipeline {
 	  }
 	}		
        stage('Install') {
-           steps {
-               echo 'Install de app'
+            steps {
+                echo 'Install de app'
       }
     }  
          stage('Deploy') {
-             steps {
-        echo 'Deploy de app'
+               steps {
+                   echo 'Deploy de app'
       } 
 		}
   }
