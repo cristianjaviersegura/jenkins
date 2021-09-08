@@ -5,7 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Build de app'
-	  }
+	    }
 	}		
     stage('Install') {
       steps {
