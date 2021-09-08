@@ -1,28 +1,17 @@
-CODE_CHANGES = getGitChanges()
 pipeline {
   agent any
   stages {
-      stage('Build') {
-          when {
-              expression {
-                  BRANCH_NAME == 'main' || CODE_CHANGES == true       
-              }
-           }       
+      stage("Build") {
            steps {
                echo 'Build de app'
 	         }
 	    }		
-       stage('Install') {
+       stage("Install") {
             steps {
                 echo 'Install de app'
             }
       }  
-         stage('Deploy') {
-             when {
-                expression {
-                    BRANCH_NAME == 'main'
-                }
-             }
+         stage("Deploy") {
             steps {
                 echo 'Deploy de app'
             } 
